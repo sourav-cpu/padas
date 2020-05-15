@@ -10,7 +10,7 @@ df.replace({
     'No':0
 })
 area=np.pi*3
-plt.scatter(df["studytime"],df["finalgrade"],c=green,s=area,alpha=0.5
+plt.scatter(df["studytime"],df["finalgrade"],c=green,s=area,alpha=0.5)
 plt.xlabel("studytime")
 plt.ylabel("finalgrade")
 plt.show()
