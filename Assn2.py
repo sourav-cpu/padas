@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 %matplotlib inline
 import numpy as np
+import seaborn as sns
 df=pd.read_csv("student-math.csv")
 df['final grade']=df['G1'] + df['G2'] + df['G3']
 df.drop(['G1'],['G2'],['G3'],axis=1,inplace=True)
@@ -14,3 +15,4 @@ plt.scatter(df["studytime"],df["finalgrade"],c=green,s=area,alpha=0.5)
 plt.xlabel("studytime")
 plt.ylabel("finalgrade")
 plt.show()
+sns.boxplot(x="final_grade",y="studytime",data=df)
